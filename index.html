@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Philippine Humanitarian Aid Society</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>PHAS</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Serving Humanity, Saving Lives</h1>
+                <p>The Philippine Humanitarian Aid Society is dedicated to providing emergency assistance, disaster relief, and healthcare services to vulnerable communities across the Philippines.</p>
+                <div class="hero-buttons">
+                    <a href="volunteer.html" class="btn btn-primary">Become a Volunteer</a>
+                    <a href="volunteer.html" class="btn btn-secondary">Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Alert -->
+    <div class="emergency-alert" id="emergencyAlert">
+        <div class="container">
+            <div class="alert-content">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="alert-text">
+                    <strong>Emergency Response Active:</strong> Providing aid to families affected by recent flooding in Central Luzon.
+                </div>
+                <button class="alert-close" id="alertClose">&times;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Campaign Highlights -->
+    <section class="campaigns">
+        <div class="container">
+            <h2>Current Campaigns</h2>
+            <div class="campaign-grid" id="campaignGrid">
+                <!-- Campaign cards will be loaded dynamically via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <h2>Our Core Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health Services</h3>
+                    <p>Medical missions, blood donation drives, and community health education programs.</p>
+                    <a href="services.html#health">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Disaster Response</h3>
+                    <p>Emergency relief, shelter provision, and recovery support for disaster-affected communities.</p>
+                    <a href="services.html#disaster">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h3>Community Support</h3>
+                    <p>Livelihood programs, psychosocial support, and assistance for vulnerable groups.</p>
+                    <a href="services.html#community">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="statistics">
+        <div class="container">
+            <h2>Our Impact in 2026</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="12500">0</div>
+                    <div class="stat-label">Lives Saved</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="3200">0</div>
+                    <div class="stat-label">Volunteers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="78">0</div>
+                    <div class="stat-label">Communities Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="45">0</div>
+                    <div class="stat-label">Disaster Responses</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo footer-logo">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Philippine Humanitarian Aid Society</span>
+                    </a>
+                    <p>Providing humanitarian assistance and support to communities in need across the Philippines since 1985.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 1234 Ayala Avenue, Makati City, Philippines</p>
+                    <p><i class="fas fa-phone"></i> (02) 8888-9999</p>
+                    <p><i class="fas fa-envelope"></i> info@phas.org.ph</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Philippine Humanitarian Aid Society. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

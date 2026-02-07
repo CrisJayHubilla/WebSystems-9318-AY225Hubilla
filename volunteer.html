@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer & Donate | Philippine Humanitarian Aid Society</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>PHAS</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="volunteer.html" class="active">Volunteer</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Get Involved</h1>
+            <p>Join our humanitarian mission as a volunteer, donor, or partner</p>
+        </div>
+    </section>
+
+    <!-- Volunteer Tabs -->
+    <section class="volunteer-tabs">
+        <div class="container">
+            <div class="tabs" id="involvementTabs">
+                <button class="tab-btn active" data-tab="volunteer">Become a Volunteer</button>
+                <button class="tab-btn" data-tab="donate">Make a Donation</button>
+                <button class="tab-btn" data-tab="membership">Organization Membership</button>
+                <button class="tab-btn" data-tab="contact">Contact & Inquiry</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Form -->
+    <section id="volunteer" class="tab-content active">
+        <div class="container">
+            <div class="volunteer-content">
+                <div class="volunteer-info">
+                    <h2>Join Our Volunteer Community</h2>
+                    <p>Volunteers are the heart of our organization. Whether you can contribute a few hours a week or join our emergency response teams, your time and skills can make a difference.</p>
+                    
+                    <div class="volunteer-benefits">
+                        <h3>Volunteer Benefits</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Training and skill development</li>
+                            <li><i class="fas fa-check-circle"></i> Opportunity to serve communities in need</li>
+                            <li><i class="fas fa-check-circle"></i> Certificate of recognition and service hours</li>
+                            <li><i class="fas fa-check-circle"></i> Join a network of dedicated humanitarian workers</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="volunteer-roles">
+                        <h3>Volunteer Roles Available</h3>
+                        <div class="roles-grid">
+                            <div class="role-card">
+                                <i class="fas fa-first-aid"></i>
+                                <h4>Medical Volunteer</h4>
+                                <p>Doctors, nurses, EMTs for medical missions</p>
+                            </div>
+                            <div class="role-card">
+                                <i class="fas fa-people-carry"></i>
+                                <h4>Disaster Response</h4>
+                                <p>Emergency relief and rescue operations</p>
+                            </div>
+                            <div class="role-card">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <h4>Community Trainer</h4>
+                                <p>Conduct disaster preparedness workshops</p>
+                            </div>
+                            <div class="role-card">
+                                <i class="fas fa-desktop"></i>
+                                <h4>Administrative Support</h4>
+                                <p>Office assistance and program coordination</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="volunteer-form-container">
+                    <h3>Volunteer Registration Form</h3>
+                    <form id="volunteerForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Contact Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <div class="error-message" id="phoneError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="volunteerType">Volunteer Interest *</label>
+                            <select id="volunteerType" name="volunteerType" required>
+                                <option value="">Select an area of interest</option>
+                                <option value="medical">Medical Services</option>
+                                <option value="disaster">Disaster Response</option>
+                                <option value="community">Community Support</option>
+                                <option value="training">Training & Education</option>
+                                <option value="admin">Administrative Support</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message" id="volunteerTypeError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="availability">Availability *</label>
+                            <select id="availability" name="availability" required>
+                                <option value="">Select your availability</option>
+                                <option value="weekdays">Weekdays</option>
+                                <option value="weekends">Weekends</option>
+                                <option value="evenings">Evenings</option>
+                                <option value="flexible">Flexible</option>
+                                <option value="emergency">Emergency Response Only</option>
+                            </select>
+                            <div class="error-message" id="availabilityError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="skills">Skills & Experience</label>
+                            <textarea id="skills" name="skills" rows="3" placeholder="Please describe any relevant skills, certifications, or experience"></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the terms and conditions of volunteering</label>
+                            <div class="error-message" id="termsError"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Submit Volunteer Application</button>
+                    </form>
+                    
+                    <div id="formSuccess" class="success-message" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Thank You for Your Application!</h3>
+                        <p>Your volunteer application has been submitted successfully. Our team will contact you within 3-5 business days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="tab-content">
+        <div class="container">
+            <div class="donation-content">
+                <div class="donation-info">
+                    <h2>Support Our Humanitarian Work</h2>
+                    <p>Your donation helps us provide emergency relief, medical services, and community support to those in need across the Philippines.</p>
+                    
+                    <div class="donation-impact">
+                        <h3>Your Impact</h3>
+                        <div class="impact-grid">
+                            <div class="impact-card">
+                                <div class="impact-amount">₱500</div>
+                                <p>Provides emergency food packs for a family of 5</p>
+                            </div>
+                            <div class="impact-card">
+                                <div class="impact-amount">₱1,000</div>
+                                <p>Supplies a first aid kit for community responders</p>
+                            </div>
+                            <div class="impact-card">
+                                <div class="impact-amount">₱5,000</div>
+                                <p>Supports a child's education for one school year</p>
+                            </div>
+                            <div class="impact-card">
+                                <div class="impact-amount">₱10,000</div>
+                                <p>Funds a medical mission for 50 patients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="donation-options">
+                    <h3>Donation Options</h3>
+                    <div class="donation-cards">
+                        <div class="donation-card">
+                            <h4>One-Time Donation</h4>
+                            <div class="donation-amounts">
+                                <button class="amount-btn" data-amount="500">₱500</button>
+                                <button class="amount-btn" data-amount="1000">₱1,000</button>
+                                <button class="amount-btn" data-amount="5000">₱5,000</button>
+                                <button class="amount-btn" id="customAmountBtn">Custom Amount</button>
+                            </div>
+                            <div class="custom-amount" id="customAmountInput" style="display: none;">
+                                <input type="number" id="customDonation" placeholder="Enter amount in pesos">
+                            </div>
+                        </div>
+                        
+                        <div class="donation-card">
+                            <h4>Monthly Sustainer</h4>
+                            <p>Become a monthly donor to provide consistent support for our ongoing programs.</p>
+                            <div class="monthly-options">
+                                <button class="monthly-btn" data-amount="300">₱300/month</button>
+                                <button class="monthly-btn" data-amount="500">₱500/month</button>
+                                <button class="monthly-btn" data-amount="1000">₱1,000/month</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-options">
+                            <div class="payment-option">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Credit/Debit Card</span>
+                            </div>
+                            <div class="payment-option">
+                                <i class="fas fa-university"></i>
+                                <span>Bank Transfer</span>
+                            </div>
+                            <div class="payment-option">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile Payment</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-block" id="donateNowBtn">Proceed to Donation</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section id="membership" class="tab-content">
+        <div class="container">
+            <div class="membership-content">
+                <h2>Organization Membership</h2>
+                <p>Join our network of partner organizations, corporations, and institutions supporting humanitarian work in the Philippines.</p>
+                
+                <div class="membership-benefits">
+                    <h3>Membership Benefits</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Partnership Opportunities</h4>
+                            <p>Collaborate on humanitarian projects and corporate social responsibility initiatives.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Impact Reporting</h4>
+                            <p>Receive detailed reports on how your organization's support is making a difference.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-award"></i>
+                            <h4>Recognition</h4>
+                            <p>Public acknowledgment as a humanitarian partner in our communications and events.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-users"></i>
+                            <h4>Networking</h4>
+                            <p>Connect with other organizations committed to humanitarian causes.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="membership-form">
+                    <h3>Membership Inquiry</h3>
+                    <form id="membershipForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="orgName">Organization Name *</label>
+                                <input type="text" id="orgName" name="orgName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="orgType">Organization Type *</label>
+                                <select id="orgType" name="orgType" required>
+                                    <option value="">Select type</option>
+                                    <option value="corporate">Corporate</option>
+                                    <option value="ngo">NGO/Non-profit</option>
+                                    <option value="educational">Educational Institution</option>
+                                    <option value="government">Government Agency</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactPerson">Contact Person *</label>
+                                <input type="text" id="contactPerson" name="contactPerson" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Contact Email *</label>
+                                <input type="email" id="contactEmail" name="contactEmail" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="membershipInterest">Interest in Membership *</label>
+                            <select id="membershipInterest" name="membershipInterest" required>
+                                <option value="">Select interest</option>
+                                <option value="partnership">Project Partnership</option>
+                                <option value="funding">Funding Support</option>
+                                <option value="volunteer">Employee Volunteer Program</option>
+                                <option value="other">Other Collaboration</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="orgDescription">Organization Description</label>
+                            <textarea id="orgDescription" name="orgDescription" rows="4" placeholder="Brief description of your organization and its activities"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Submit Membership Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="tab-content">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p>Get in touch with us for inquiries, partnerships, or additional information about our humanitarian work.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Main Office</h4>
+                                <p>1234 Ayala Avenue, Makati City, Philippines 1200</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Contact Numbers</h4>
+                                <p>Main: (02) 8888-9999</p>
+                                <p>Emergency Hotline: (02) 8888-1234</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Addresses</h4>
+                                <p>General Inquiries: info@phas.org.ph</p>
+                                <p>Partnerships: partnerships@phas.org.ph</p>
+                                <p>Media: media@phas.org.ph</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Office Hours</h4>
+                                <p>Monday to Friday: 8:00 AM - 6:00 PM</p>
+                                <p>Emergency Services: 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Your Name *</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactEmail2">Email Address *</label>
+                            <input type="email" id="contactEmail2" name="contactEmail2" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+                            <select id="contactSubject" name="contactSubject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="donation">Donation Question</option>
+                                <option value="volunteer">Volunteer Inquiry</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo footer-logo">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Philippine Humanitarian Aid Society</span>
+                    </a>
+                    <p>Providing humanitarian assistance and support to communities in need across the Philippines since 1985.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 1234 Ayala Avenue, Makati City, Philippines</p>
+                    <p><i class="fas fa-phone"></i> (02) 8888-9999</p>
+                    <p><i class="fas fa-envelope"></i> info@phas.org.ph</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Philippine Humanitarian Aid Society. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Donation Modal -->
+    <div class="modal" id="donationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Complete Your Donation</h2>
+                <button class="modal-close" id="donationModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="donation-summary">
+                    <h3>Donation Summary</h3>
+                    <p>Amount: <span id="donationAmount">₱0</span></p>
+                    <p>Type: <span id="donationType">One-time donation</span></p>
+                </div>
+                <div class="payment-form">
+                    <h3>Payment Information</h3>
+                    <form id="paymentForm">
+                        <div class="form-group">
+                            <label for="cardName">Name on Card</label>
+                            <input type="text" id="cardName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date</label>
+                                <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Process Donation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

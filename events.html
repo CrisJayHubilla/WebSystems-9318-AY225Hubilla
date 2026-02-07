@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Announcements | Philippine Humanitarian Aid Society</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>PHAS</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="events.html" class="active">Events</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Events, Announcements & Projects</h1>
+            <p>Stay updated with our latest activities, campaigns, and ongoing humanitarian projects</p>
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="events-filter">
+        <div class="container">
+            <div class="filter-buttons" id="filterButtons">
+                <button class="filter-btn active" data-filter="all">All Activities</button>
+                <button class="filter-btn" data-filter="upcoming">Upcoming Events</button>
+                <button class="filter-btn" data-filter="ongoing">Ongoing Projects</button>
+                <button class="filter-btn" data-filter="announcement">Announcements</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Grid -->
+    <section class="events-section">
+        <div class="container">
+            <div class="events-grid" id="eventsGrid">
+                <!-- Events will be loaded dynamically via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Showcase -->
+    <section class="projects-section">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-showcase">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-tag">Disaster Response</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Typhoon Resilience Initiative</h3>
+                        <p>Building disaster-resilient communities in typhoon-prone areas through early warning systems, evacuation planning, and infrastructure improvement.</p>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                            <div class="progress-text">65% Complete</div>
+                        </div>
+                        <div class="project-details">
+                            <span><i class="fas fa-map-marker-alt"></i> Eastern Visayas</span>
+                            <span><i class="fas fa-calendar-alt"></i> Jan 2023 - Dec 2024</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-tag">Health Services</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Community Health Access Program</h3>
+                        <p>Expanding access to basic healthcare in remote communities through mobile clinics and telemedicine services.</p>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                            <div class="progress-text">80% Complete</div>
+                        </div>
+                        <div class="project-details">
+                            <span><i class="fas fa-map-marker-alt"></i> Cordillera Region</span>
+                            <span><i class="fas fa-calendar-alt"></i> Jun 2022 - May 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcements -->
+    <section class="announcements-section">
+        <div class="container">
+            <h2>Important Announcements</h2>
+            <div class="announcements-list" id="announcementsList">
+                <!-- Announcements will be loaded dynamically via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Modal (Hidden by default) -->
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Event Title</h2>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-info">
+                    <p><i class="fas fa-calendar-alt"></i> <span id="modalDate">Date</span></p>
+                    <p><i class="fas fa-map-marker-alt"></i> <span id="modalLocation">Location</span></p>
+                    <p><i class="fas fa-users"></i> <span id="modalAudience">Audience</span></p>
+                </div>
+                <div id="modalDescription">
+                    <!-- Event description will be inserted here -->
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" id="registerBtn">Register for this Event</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo footer-logo">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Philippine Humanitarian Aid Society</span>
+                    </a>
+                    <p>Providing humanitarian assistance and support to communities in need across the Philippines since 1985.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 1234 Ayala Avenue, Makati City, Philippines</p>
+                    <p><i class="fas fa-phone"></i> (02) 8888-9999</p>
+                    <p><i class="fas fa-envelope"></i> info@phas.org.ph</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Philippine Humanitarian Aid Society. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
